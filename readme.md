@@ -33,9 +33,9 @@ name(varchar(50), NULL)
 last_name(varchar(50), NOTNULL)
 materia(varchar(50), NOTNULL)
 
-## table name: Esami
+## table name: Appelli d'esame
 id(PK)
-appelli(TINYINT, NULL)
+data(date, NOTNULL)
 materia(varchar(50), NOTNULL)
 
 ## table name: Studente
