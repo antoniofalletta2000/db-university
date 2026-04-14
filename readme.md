@@ -7,6 +7,7 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 -ogni `Corso` prevede più appelli d'`Esame`;
 -ogni `Studente` è iscritto ad un solo `Corso di Laurea`;
 -ogni `Studente` può iscriversi a più appelli di `Esame`;
+
 -per ogni appello d'`Esame` a cui lo `Studente` ha partecipato, è necessario memorizzare il voto ottenuto, anche se non sufficiente.
 
 Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi di stabilirne le relazioni. Infine, andiamo a definire le colonne e i tipi di dato di ogni tabella.
@@ -28,14 +29,17 @@ name(varchar(255))
 
 ## table name: Insegnanti
 id(PK)
-name(varchar(50), NOTNULL)
+name(varchar(50), NULL)
 last_name(varchar(50), NOTNULL)
+materia(varchar(50), NOTNULL)
 
 ## table name: Esami
 id(PK)
 appelli(TINYINT, NULL)
+materia(varchar(50), NOTNULL)
 
 ## table name: Studente
 id(PK)
-voto(varchar(7), DEFAULT("In correzione"))
-esito(TINYINT(0,1), NULL)
+name(varchar(50), NULL)
+last_name(varchar(50), NULL)
+matricola(SMALLINT, NOTNULL)
