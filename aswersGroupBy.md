@@ -18,4 +18,4 @@ GROUP BY exam_id;
 SELECT departments.name AS department, COUNT(*) AS "quantità di corsi"
 FROM degrees
 JOIN departments ON departments.id = degrees.department_id
-GROUP BY departments.id
+GROUP BY departments.id;
